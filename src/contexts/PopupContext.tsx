@@ -2,15 +2,20 @@
 
 import { createContext, useContext, useState, type ReactNode } from 'react';
 import ConfirmationPopup from '@/shared/components/popups/ConfirmationPopup';
+import WaitlistPopup from '@/shared/components/popups/Waitlist';
 
-export type PopupType = 'confirmation';
+export type PopupType = 'confirmation' | 'waitlist';
 
 // Define props for each popup type
 export interface PopupProps {
   confirmation?: {
     action: unknown;
     onPositive: () => void;
-  };
+  },
+  waitlist?: {
+    action: unknown;
+    onPositive: () => void;
+  },
 }
 
 interface PopupContextType {
@@ -58,6 +63,14 @@ export const PopupProvider = ({ children }: { children: ReactNode }) => {
       case 'confirmation':
         return (
           <ConfirmationPopup
+            open={isOpen}
+            onClose={close}
+            {...currentPopup.props}
+          />
+        );
+      case 'waitlist':
+        return (
+          <WaitlistPopup
             open={isOpen}
             onClose={close}
             {...currentPopup.props}
