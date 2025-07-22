@@ -1,0 +1,14 @@
+// templates
+@use 'templates/base_layout';
+
+//reusable pieces
+@use 'templates-base';
+@use 'dividers';
+@use 'templates/bio-profiles';
+
+
+// TODO: fixed the issue with white bg on page render
+
+body {
+  overscroll-behavior: none;
+}
