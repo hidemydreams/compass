@@ -27,10 +27,10 @@ function ConfirmationPopup({
       <DialogContent className='sm:max-w-md'>
         <DialogHeader>
           <div className='flex items-center gap-2'>
-            <DialogTitle>{capitalize(action)} section</DialogTitle>
+            <DialogTitle>{capitalize(action as string)} section</DialogTitle>
           </div>
           <DialogDescription className='text-left'>
-            You are about to {action} your section. Are you sure you want to do
+            You are about to {action as string} your section. Are you sure you want to do
             this?
           </DialogDescription>
         </DialogHeader>
