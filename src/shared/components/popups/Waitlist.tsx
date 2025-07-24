@@ -5,10 +5,12 @@ import {
 } from '@/shared/components/ui/dialog';
 import { Button } from '@/shared/components/ui/button';
 import { DialogBody } from 'next/dist/client/components/react-dev-overlay/internal/components/Dialog';
-import { CheckCircle, Mail, Sparkles} from 'lucide-react';
+import { CheckCircle, Mail} from 'lucide-react';
 import { Badge } from '@/shared/components/ui/badge';
 import { Input } from '@/shared/components/ui/input';
 import { useState } from 'react';
+import Logo from '@/shared/components/Logo';
+import { settings } from '@/settings';
 
 interface CreatorFeaturesPopupProps {
   open: boolean;
@@ -55,13 +57,10 @@ function WaitlistPopup({
                   <>
                     {/* Header */}
                     <div className="text-center mb-6">
-                      <div
-                        className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl mb-4">
-                        <Sparkles className="h-8 w-8 text-white" />
-                      </div>
+                      <Logo className="mb-12" />
                       <DialogTitle className="text-2xl font-bold text-gray-900 mb-2">Join the waitlist</DialogTitle>
                       <p className="text-gray-600">
-                        Be the first to know when Compass launches. We&apos;ll send you early access and exclusive updates.
+                        Be the first to know when {settings.appName} launches. We&apos;ll send you early access and exclusive updates.
                       </p>
                     </div>
 
@@ -73,7 +72,7 @@ function WaitlistPopup({
                       </div>
                       <div className="w-px h-8 bg-gray-200"></div>
                       <div className="text-center">
-                        <div className="font-bold text-gray-900">Q1 2024</div>
+                        <div className="font-bold text-gray-900">Q3 2025</div>
                         <div className="text-gray-500">launch date</div>
                       </div>
                     </div>
@@ -114,10 +113,6 @@ function WaitlistPopup({
                       <div className="flex items-center space-x-2 text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500" />
                         <span>Early access to beta</span>
-                      </div>
-                      <div className="flex items-center space-x-2 text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                        <span>Exclusive job search tips</span>
                       </div>
                       <div className="flex items-center space-x-2 text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500" />

@@ -1,7 +1,7 @@
 export const settings = {
-  appName: 'baseApp',
-  appUrl: 'https://basepp.app',
-  appMotto: `baseApp – Connect Everything in One Link`,
-  appDescription: 'BaseApp',
-  email: 'support@email.com',
+  appName: 'Jobmule',
+  appUrl: 'https://jobmule.app',
+  appMotto: `jobmule`,
+  appDescription: 'jobmule',
+  email: 'support@jobmule.com',
 };
